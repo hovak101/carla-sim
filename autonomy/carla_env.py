@@ -43,7 +43,7 @@ def hide_map_layers(world) -> None:
     print(f"Hid {len(ids_to_hide)} environment objects")
 
 
-def spawn_vehicle(world, vehicle_type: str = config.VEHICLE_TYPE, spawn_index: int = config.SPAWN_INDEX):
+def spawn_vehicle(world, spawn_index: int, vehicle_type: str = config.VEHICLE_TYPE):
     """Spawn the car at a fixed spawn point (same car + location every run) and park the spectator above it."""
     blueprint = world.get_blueprint_library().find(vehicle_type)
     spawn_point = world.get_map().get_spawn_points()[spawn_index]

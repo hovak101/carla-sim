@@ -16,7 +16,8 @@ INPUT_WIDTH = CAMERA_WIDTH
 CARLA_HOST = "localhost"
 CARLA_PORT = 2000
 VEHICLE_TYPE = "vehicle.tesla.model3"
-SPAWN_INDEX = 5
+ON_TURN_INDEX = 5  # spawn point just before a turn
+ON_STRAIGHT_INDEX = 18  # spawn point on a straight stretch
 
 # --- speed controller ---
 MAX_SPEED = 300
@@ -31,3 +32,4 @@ LOOKAHEAD = 5.0  # meters ahead of the car to aim at
 # --- data / model files ---
 DATA_DIR = "training_data"  # images/<id>.png plus steering.csv, linked by the id column
 MODEL_PATH = "steering_model.pt"
+INFERENCE_LOG_PATH = "inference_steering.csv"  # per-tick steering log written by run_inference
